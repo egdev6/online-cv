@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "/var/www/html/curriculum",
+    "paths": {
+      "src/*": ["./src/*"],
+      "@react-components/*": ["./src/components/react/*"],
+      "@astro-components/*": ["./src/components/astro/*"],
+      "@icons/*": ["./src/assets/icons/*"],
+      "@images/*": ["./src/assets/images/*"],
+      "@vectors/*": ["./src/assets/vectors/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@stores/*": ["./src/stores/*"]
+    },
+    "jsxImportSource": "react"
+  },
+  "include": ["src", "custom.d.ts", "env.d.ts", "astro-i18next.config.mjs"],
+  "extends": "astro/tsconfigs/strict"
+}

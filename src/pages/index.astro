@@ -1,0 +1,73 @@
+---
+import Menu from '@react-components/menu'
+import Footer from '@react-components/footer'
+import Loader from '@astro-components/Loader.astro'
+import MobileBlock from '@astro-components/MobileBlock.astro'
+import Backdrop from '@astro-components/Backdrop.astro'
+import i18next from "i18next";
+import { changeLanguage } from 'i18next'
+import Step from '@astro-components/Step.astro';
+import ScrollContainer from '@react-components/scroll-container';
+import Presentation from '@react-components/steps/presentation';
+import About from '@react-components/steps/about';
+import Skills from '@react-components/steps/skills';
+import Experience from '@react-components/steps/experience';
+import Projects from '@react-components/steps/projects';
+import Contact from '@react-components/steps/contact';
+
+changeLanguage(i18next.language || 'es')
+---
+
+<!doctype html>
+<html lang={i18next.language}>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Egdev</title>
+		<meta name="description" content='Enrique Gómez Navarro online CV' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/src/assets/images/logo-rounded.png" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/src/styles/global.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<Loader />
+		<MobileBlock />
+		<Backdrop />
+		<Menu client:only/>
+		<ScrollContainer client:only>
+			<Step id="step1">
+				<Presentation client:only/>
+			</Step>
+			<Step id="step2">
+				<About client:only/>
+			</Step>
+			<Step id="step3">
+				<Skills client:only/>
+			</Step>
+			<Step id="step4">
+				<Experience client:only/>
+			</Step>
+			<Step id="step5">
+				<Projects client:only/>
+			</Step>
+			<Step id="step6">
+				<Contact client:only/>
+			</Step>
+		</ScrollContainer>
+		<Footer client:only/>
+		<div class='modal-root'></div>		
+	</body>
+</html>
+<script>
+	window.onload = function() {
+		const loader = document.getElementById('loader-background');
+
+		setTimeout(() => {
+			if(loader){
+				loader.style.animation = 'fadeOut 0.3s forwards';
+			}
+		}, 600);
+	}	
+</script>
+

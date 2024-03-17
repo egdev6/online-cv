@@ -1,0 +1,29 @@
+---
+interface Props {
+	id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id={id} class="step">
+  <slot />
+</section>
+
+<style is:global>
+  .step {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    overflow:hidden;
+  }
+
+  .step img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

@@ -1,0 +1,158 @@
+<div class="backdrop">
+  <div class="line-left"></div>
+  <div class="line-right1"></div>
+  <div class="line-right2"></div>
+  <div class="line-bottom1"></div>
+  <div class="line-bottom2"></div>
+  <div class="line-top1"></div>
+  <div class="line-top2"></div>
+  <div class="line-top3"></div>
+</div>
+
+<style>
+  	.backdrop{
+		position: fixed;
+		z-index:8;
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0;
+		padding: 40px;
+		pointer-events: none;
+	}
+
+	.backdrop:before {
+		position: absolute;
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0;
+		border: solid 40px transparent;
+		background: var(--color-background-opacity);
+	}
+	
+	.backdrop .line-left{
+		position: absolute;
+		top: 40px; 
+		left: 40px; 
+		bottom:40px;
+		width:1px;
+		background-color: var(--color-text-opacity);
+	}
+	
+	.backdrop .line-right1{
+		position: absolute;
+		top: 40px; 
+		right: 40px; 
+		width:1px;
+		height:calc(calc(100vh - 80px) / 2 - 320px / 2);
+		background-color: var(--color-text-opacity);
+	}
+	.backdrop .line-right2{
+		position: absolute;
+		bottom: 40px; 
+		right: 40px; 
+		width:1px;
+		height:calc(calc(100vh - 80px) / 2 - 320px / 2);
+		background-color: var(--color-text-opacity);
+	}
+
+	.backdrop .line-bottom1{
+		position: absolute;
+		bottom: 40px; 
+		left: 41px; 
+		width:40px;
+		height:1px;
+		background-color: var(--color-text-opacity);
+	}
+	
+	.backdrop .line-bottom2{
+		position: absolute;
+		bottom: 40px; 
+		right: 41px; 
+		width: calc(100vw - 82px - 250px);
+		height: 1px;
+		background-color: var(--color-text-opacity);
+	}
+	
+	.backdrop .line-top1{
+		position: absolute;
+		top: 40px; 
+		left: 41px; 
+		width:40px;
+		height:1px;
+		background-color: var(--color-text-opacity);
+	}
+	
+	.backdrop .line-top2{
+		position: absolute;
+		top: 40px; 
+		right: 218px; 
+		left:288px;
+		height:1px;
+		background-color: var(--color-text-opacity);
+	}
+	
+	.backdrop .line-top3{
+		position: absolute;
+		top: 40px; 
+		right: 41px; 
+		width:40px;
+		height:1px;
+		background-color: var(--color-text-opacity);
+	}
+
+	@media (max-width: 686px) {
+		.backdrop{
+			padding: 40px 20px 20px 20px;
+		}
+		.backdrop:before {
+			border: solid 20px transparent;
+		}
+
+		.backdrop .line-left{
+			top: 30px; 
+			left: 24px; 
+			bottom:20px;
+		}
+
+		.backdrop .line-right1{
+			top: 30px; 
+			right: 24px; 
+			height:calc(calc(100vh - 50px) / 2 - 320px / 2);
+		}
+		.backdrop .line-right2{
+			bottom: 20px; 
+			right: 24px; 
+			height:calc(calc(100vh - 50px) / 2 - 320px / 2);
+		}
+
+		.backdrop .line-bottom1{
+			bottom: 20px; 
+			left: 24px; 
+			width: calc(100vw - 48px);
+		}
+	
+		.backdrop .line-bottom2{
+			display:none;
+		}
+
+		.backdrop .line-top1{
+			top: 30px; 
+			left: 24px; 
+			width:10px;
+		}
+
+		.backdrop .line-top2{
+			top: 30px; 
+			right: 145px; 
+			left:190px;
+		}
+
+		.backdrop .line-top3{
+			top: 30px; 
+			right: 24px; 
+			width:10px;
+		}
+	}
+</style>

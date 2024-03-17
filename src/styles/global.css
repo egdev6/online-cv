@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Moonhouse';
+  src: url(../assets/fonts/moonhouse.ttf) format('truetype');
+}
+
+:root {
+  /* SOLID COLORS */
+  --color-primary: #830213;
+  --color-secondary: #b41520;
+  --color-terciary: #d61e2b;
+  --color-background: #111111;
+  --color-grey-dark: #18191e;
+  --color-grey-medium: #272830;
+  --color-gray-light: #3b3d49;
+  --color-text: #f6f6f6;
+  --color-yellow: #f0db4f;
+  /* RGBA COLORS */
+  --color-background-opacity: rgba(17, 17, 17, 0.8);
+  --color-text-opacity: rgba(229, 229, 229, 0.4);
+  /* GRADIENT COLORS */
+  --color-red-gradient: linear-gradient(90deg, #d61e2b 0%, #830213 100%);
+  --color-background-opacity-right: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 1) 2%,
+    rgba(17, 17, 17, 0.8) 15%,
+    rgba(17, 17, 17, 0.8) 100%
+  );
+  --color-background-opacity-left: linear-gradient(
+    to left,
+    rgba(17, 17, 17, 1) 2%,
+    rgba(17, 17, 17, 0.8) 15%,
+    rgba(17, 17, 17, 0.8) 100%
+  );
+  --color-background-opacity-bottom: linear-gradient(
+    to bottom,
+    rgba(17, 17, 17, 1) 2%,
+    rgba(17, 17, 17, 0.8) 10%,
+    rgba(17, 17, 17, 0.8) 100%
+  );
+  --color-background-opacity-top: linear-gradient(to bottom, #18191e 0%, #272830 80%);
+  /* FONTS */
+  --font-primary: 'Moonhouse';
+  --font-text: 'Ubuntu';
+
+  /* SKILLS GRID */
+  --s: 120px; /* size  */
+  --m: 6px; /* space */
+  --r: calc(var(--s) + 4 * var(--m) - 3px);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+}
+
+html,
+body {
+  background-color: var(--color-background);
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  overflow: hidden;
+}
+
+h1 {
+  font-family: var(--font-secondary);
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+h2 {
+  font-family: var(--font-secondary);
+  font-size: 4rem;
+  font-size: 1;
+}
+
+h3 {
+  font-family: var(--font-secondary);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h4 {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+h5 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 686px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}

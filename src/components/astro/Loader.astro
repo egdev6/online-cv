@@ -1,0 +1,112 @@
+---
+
+import { t } from 'i18next'
+
+---
+<div id="loader-background">
+  <div class="loader"></div>
+  <h4>{t('Cargando')}</h4>
+</div>
+
+<style>
+  #loader-background{
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		bottom:0;
+		right:0;
+		background-color: var(--color-background);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction:column;
+		pointer-events: none;
+	}
+	#loader-background>h4{
+		margin-top: 20px;
+		color: var(--color-text);
+	}
+	.loader {
+		perspective: 1000px;
+		transform: rotateZ(45deg);
+		color: var(--color-text);
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+	}
+	.loader:before,
+	.loader:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: inherit;
+		height: inherit;
+		border-radius: 50%;
+		transform: rotateX(70deg);
+		animation: 1s spin linear infinite;
+	}
+	.loader:after {
+		color: var(--color-primary);
+		transform: rotateY(70deg);
+		animation-delay: .4s;
+	}
+
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			display:none;
+		}
+	}
+
+	@keyframes rotate {
+		0% {
+			transform: translate(-50%, -50%) rotateZ(0deg);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotateZ(360deg);
+		}
+	}
+
+	@keyframes rotateccw {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotate(-360deg);
+		}
+	}
+
+	@keyframes spin {
+		0%,
+		100% {
+			box-shadow: .2em 0px 0 0px currentcolor;
+		}
+		12% {
+			box-shadow: .2em .2em 0 0 currentcolor;
+		}
+		25% {
+			box-shadow: 0 .2em 0 0px currentcolor;
+		}
+		37% {
+			box-shadow: -.2em .2em 0 0 currentcolor;
+		}
+		50% {
+			box-shadow: -.2em 0 0 0 currentcolor;
+		}
+		62% {
+			box-shadow: -.2em -.2em 0 0 currentcolor;
+		}
+		75% {
+			box-shadow: 0px -.2em 0 0 currentcolor;
+		}
+		87% {
+			box-shadow: .2em -.2em 0 0 currentcolor;
+		}
+	}
+</style>

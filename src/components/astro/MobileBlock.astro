@@ -1,0 +1,50 @@
+---
+import { t } from 'i18next'
+import Laptop from '@icons/laptop.svg?raw'
+import Tablet from '@icons/tablet.svg?raw'
+---
+<div class="mobile-block">
+	<div class="block-icons">
+		<Fragment set:html={Tablet} />
+		<Fragment set:html={Laptop} />
+	</div>
+  <p>
+		{t('Cambia a un dispositivo más grande para ver la página.')}
+	</p>
+</div>
+
+<style is:global>
+  .mobile-block{
+		display: none;
+	}
+	@media (max-width: 926px) and (orientation: landscape), (max-width: 800px) and (orientation: portrait){
+		.mobile-block{
+			display:flex;
+			flex-direction: column;
+			align-items:center;
+			justify-content: center;
+			position:fixed;
+			top:0;
+			left:0;
+			bottom:0;
+			right:0;
+			background-color: var(--color-background);
+			color:var(--color-text);
+			z-index:9;
+		}
+
+		.mobile-block > .block-icons{
+			margin-bottom: 20px;
+		}
+
+		.mobile-block > .block-icons > svg{
+			width:80px;
+		}
+
+		.mobile-block > p{
+			padding:0 20px;
+			text-align:center;
+			font-size: 1.5rem;
+		}
+	}
+</style>
