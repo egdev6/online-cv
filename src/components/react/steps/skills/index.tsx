@@ -8,10 +8,12 @@ import { type Skill } from 'src/model/skill'
 import * as S from './styled'
 import { showModal, setShowModal } from 'src/stores/modal'
 import Favorite from '@icons/favorite.svg?react'
+import { generateRandomNumber } from 'src/utils/index'
 
 const Skills: FC = () => {
   const { t } = useTranslation()
   const ref = useRef<HTMLDivElement>(null)
+  const refList = useRef<HTMLDivElement>(null)
   const current = useStore(currentStep)
   const modal = useStore(showModal)
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
@@ -19,6 +21,10 @@ const Skills: FC = () => {
   useEffect(() => {
     if (current === 2) {
       ref.current?.classList.add('start-animation')
+
+      setTimeout(() => {
+        refList.current?.classList.add('fixed')
+      }, 2000)
     }
   }, [current])
 
@@ -30,7 +36,7 @@ const Skills: FC = () => {
   const renderList = () => {
     return skillsList.map((skill, index) => {
       return (
-        <button key={index} className='skill-item' onClick={() => handleSelect(skill)}>
+        <S.SkillItem key={index} $child={index} className='skill-item' onClick={() => handleSelect(skill)}>
           <div className='skill-item-content'>
             {skill.icon}
             <div className='skill-item-info'>
@@ -38,7 +44,7 @@ const Skills: FC = () => {
               <p>{skill.title}</p>
             </div>
           </div>
-        </button>
+        </S.SkillItem>
       )
     })
   }
@@ -48,7 +54,7 @@ const Skills: FC = () => {
       <img src='src/assets/images/desktop.png' alt='Skills' />
       <div className='image-wrapper'></div>
       <h3>{t('skills.title')}</h3>
-      <S.SkillsWrapper>
+      <S.SkillsWrapper className='skills-grid' ref={refList}>
         <div>{renderList()}</div>
       </S.SkillsWrapper>
       <Modal open={modal} onClose={setShowModal} skill={selectedSkill}>
