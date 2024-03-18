@@ -30,9 +30,10 @@
     <img src="https://i.postimg.cc/FKJyrbpd/Linkedin-egdev-Mesa-de-trabajo-1.png)](https://postimg.cc/HJdc3yfd" alt="Logo">
   </a>
 
-  <h3 align="center">My online CV</h3>
+  <h3 align="center">online-cv</h3>
 
   <p align="center">
+    My online CV
     <br />
     <a href="https://github.com/egdev6/online-cv">View Demo</a>
     ·
