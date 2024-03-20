@@ -282,7 +282,6 @@ export const SlideInEllipticTopFwd = keyframes`
     opacity: 1;
   }
 `
-
 export const SlideInFwdCenter = keyframes`
   0% {
     transform: scale(0);
