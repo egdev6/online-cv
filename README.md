@@ -73,7 +73,7 @@ Desktop Version
 
 - [x] Presentation view
 - [x] About me view
-- [ ] Skills view
+- [x] Skills view
 - [ ] Experience view
 - [ ] Projects view
 - [ ] Contact view
