@@ -115,7 +115,7 @@ Mobile Version
 [license-shield]: https://img.shields.io/github/license/egdev6/online-cv.svg?style=for-the-badge
 [license-url]: https://github.com/egdev6/online-cv/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/egdev6
+[linkedin-url]: https://linkedin.com/in/egdev
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
