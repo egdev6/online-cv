@@ -8,7 +8,7 @@ import { type Skill } from 'src/model/skill'
 import * as S from './styled'
 import { showModal, setShowModal } from 'src/stores/modal'
 import Favorite from '@icons/favorite.svg?react'
-import { generateRandomNumber } from 'src/utils/index'
+import Arrow from '@icons/arrow.svg?react'
 
 const Skills: FC = () => {
   const { t } = useTranslation()
@@ -58,7 +58,24 @@ const Skills: FC = () => {
         <div>{renderList()}</div>
       </S.SkillsWrapper>
       <Modal open={modal} onClose={setShowModal} skill={selectedSkill}>
-        <p>{selectedSkill?.detail}</p>
+        <S.ModalContent>
+          <h6>{t('skills.description')}</h6>
+          <div>{selectedSkill?.detail}</div>
+          {selectedSkill?.links && selectedSkill?.links.length > 0 && (
+            <>
+              <h6>{t('skills.links')}</h6>
+              <ul>
+                {selectedSkill?.links.map((link, index) => (
+                  <li key={index}>
+                    <a href={link.url} target='_blank' rel='noreferrer'>
+                      <Arrow /> {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </S.ModalContent>
       </Modal>
     </S.SkillsContainer>
   )

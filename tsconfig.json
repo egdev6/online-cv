@@ -25,7 +25,8 @@
       "@vectors/*": ["./src/assets/vectors/*"],
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"],
-      "@stores/*": ["./src/stores/*"]
+      "@stores/*": ["./src/stores/*"],
+      "@model/*": ["./src/model/*"]
     },
     "jsxImportSource": "react"
   },

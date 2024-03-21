@@ -54,17 +54,17 @@ export const SkillsContainer = styled.div`
 
   &.start-animation {
     > img {
-      animation: ${BounceInTop} 0.6s ease-in-out 0.4s 1 forwards;
+      animation: ${BounceInTop} 0.6s ease-in-out 0.6s 1 forwards;
     }
 
     > h3{
-      animation: ${FadeInCenter} 0.8s ease-in-out 1s 1 forwards;
+      animation: ${FadeInCenter} 0.8s ease-in-out 1.2s 1 forwards;
     }
 
     >.skills-grid{
       >div{
         >.skill-item{
-          animation: ${SlideInFwdCenter} 0.6s ease-in-out 1s 1 forwards;
+          animation: ${SlideInFwdCenter} 0.6s ease-in-out 1.2s 1 forwards;
         }
       }
 
@@ -188,6 +188,49 @@ export const SkillItem = styled.button<SkillItemProps>`
         justify-content: center;
         font-size: 0.8rem;
         text-align: center;
+      }
+    }
+  }
+`
+
+export const ModalContent = styled.div`
+  width: 100%;
+  height: auto;
+
+  > h6 {
+    width: calc(100% - 60px);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  > div {
+    margin-bottom: 20px;
+    > p {
+      margin-bottom: 10px;
+    }
+  }
+
+  > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+      width: 50%;
+      position: relative;
+      > a {
+        font-size: 1rem;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+
+        > svg {
+          width: 1em;
+          height: 1em;
+          fill: var(--color-primary);
+          transform: rotate(-90deg);
+          margin-right: 5px;
+        }
       }
     }
   }

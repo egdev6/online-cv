@@ -70,37 +70,52 @@ body {
 h1 {
   font-family: var(--font-secondary);
   font-size: 4.5rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h2 {
   font-family: var(--font-secondary);
   font-size: 4rem;
-  font-size: 1;
+  font-size: 1.2;
 }
 
 h3 {
   font-family: var(--font-secondary);
   font-size: 3rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h4 {
   font-family: var(--font-secondary);
   font-size: 2rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h5 {
   font-family: var(--font-secondary);
   font-size: 1.5rem;
-  line-height: 1;
+  line-height: 1.2;
+}
+
+h6 {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 p {
   font-family: var(--font-text);
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-background);
+}
+
+a:hover {
+  color: var(--color-primary);
 }
 
 @media (max-width: 686px) {

@@ -69,8 +69,19 @@ Technologies used in this landing page's development
 
 ## Roadmap
 
+Desktop Version
+
 - [x] Presentation view
 - [x] About me view
+- [ ] Skills view
+- [ ] Experience view
+- [ ] Projects view
+- [ ] Contact view
+
+Mobile Version
+
+- [ ] Presentation view
+- [ ] About me view
 - [ ] Skills view
 - [ ] Experience view
 - [ ] Projects view

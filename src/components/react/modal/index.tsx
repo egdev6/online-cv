@@ -64,7 +64,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, className, onClose
   useEffect(() => {
     if (open) {
       setContent(children)
-      setTimeout(() => setFadeIn(true), 50)
+      setTimeout(() => setFadeIn(true), 100)
     } else {
       setFadeIn(false)
     }

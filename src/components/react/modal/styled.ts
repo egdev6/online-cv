@@ -28,7 +28,7 @@ export const Content = styled.div`
 
 export const ContentWrapper = styled.div`
   width: 0;
-  height: 95%;
+  height: auto;
   overflow: hidden;
   min-height: 360px;
   max-height: calc(100% - 80px);
@@ -42,7 +42,16 @@ export const ContentWrapper = styled.div`
   align-items: flex-end;
   transition: 0.4s ease-in-out 0.4s;
 
+  > div {
+    width: 452px;
+    overflow: hidden;
+    padding: 20px;
+  }
+
   > button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -63,7 +72,7 @@ export const ContentWrapper = styled.div`
     }
   }
 
-  @media only screen and (min-width: 915px) {
+  @media only screen and (max-width: 915px) {
     max-width: calc(100vw - 160px);
     max-height: calc(100vh - 160px);
   }
@@ -94,7 +103,6 @@ export const Backdrop = styled.div`
 
       ${ContentWrapper} {
         width: calc(100% - 300px);
-        padding: 10px 20px;
 
         ${ChildrenContent} {
           opacity: 1;

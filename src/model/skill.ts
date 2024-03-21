@@ -1,7 +1,8 @@
 export type Skill = {
   title: string
   icon: JSX.Element
-  description: string
-  detail: string
   mainStack: boolean
+  description: JSX.Element | string
+  detail: JSX.Element | string
+  links?: Array<{ title: string; url: string }> | []
 }
