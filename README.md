@@ -71,12 +71,12 @@ Technologies used in this landing page's development
 
 Desktop Version
 
-- [x] Presentation view
-- [x] About me view
-- [x] Skills view
-- [ ] Experience view
-- [ ] Projects view
-- [ ] Contact view
+- [x] Presentation view [ES, EN]
+- [x] About me view [ES, EN]
+- [x] Skills view [ES, EN]
+- [ ] Experience view [ES, EN]
+- [ ] Projects view [ES, EN]
+- [ ] Contact view [ES, EN]
 
 Mobile Version
 
