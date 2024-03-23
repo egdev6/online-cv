@@ -5,7 +5,7 @@ import { type Skill } from '@model/skill'
 const redux: Skill = {
   title: 'Redux',
   icon: <Redux />,
-  mainStack: true,
+  mainStack: false,
   description: <Trans i18nKey='skills.descriptions.redux' />,
   detail: (
     <Trans i18nKey='skills.details.redux'>

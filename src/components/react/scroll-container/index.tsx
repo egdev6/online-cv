@@ -9,11 +9,11 @@ import Projects from '@icons/projects.svg?react'
 import Contact from '@icons/contact.svg?react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styled'
-import { showModal } from 'src/stores/modal'
+import { blockScroll } from '@stores/block-scroll'
 
 const ScrollContainer: FC<PropsWithChildren> = ({ children }) => {
   const current = useStore(currentStep)
-  const modal = useStore(showModal)
+  const blocked = useStore(blockScroll)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const scrollTimeout = useRef<any>(undefined)
   const { t } = useTranslation()
@@ -55,7 +55,7 @@ const ScrollContainer: FC<PropsWithChildren> = ({ children }) => {
   }, [current])
 
   useEffect(() => {
-    if (modal) return () => false // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (blocked) return () => false // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleScroll = (e: any) => {
       e.preventDefault()
       e.stopPropagation()
@@ -84,7 +84,7 @@ const ScrollContainer: FC<PropsWithChildren> = ({ children }) => {
     return () => {
       window.removeEventListener('wheel', handleScroll)
     }
-  }, [modal, current])
+  }, [blocked, current])
 
   const renderDots = () => {
     return steps.map((_step, index) => {

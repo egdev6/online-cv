@@ -7,12 +7,12 @@ import Arrow from '@icons/arrow.svg?react'
 import Mouse from '@icons/mouse.svg?react'
 import * as S from './styled'
 import { useStore } from '@nanostores/react'
-import { currentStep } from 'src/stores/steps'
-import { showModal } from 'src/stores/modal'
+import { currentStep } from '@stores/steps'
+import { blockScroll } from '@stores/block-scroll'
 
 const Footer: FC = () => {
   const current = useStore(currentStep)
-  const modal = useStore(showModal)
+  const blocked = useStore(blockScroll)
 
   return (
     <S.FooterContainer>
@@ -38,7 +38,7 @@ const Footer: FC = () => {
           </a>
         </li>
       </ul>
-      {!modal && (
+      {!blocked && (
         <S.MouseContainer>
           <div className={`arrow-up-icon${current > 0 ? ' show' : ' hidden'}`}>
             <Arrow />

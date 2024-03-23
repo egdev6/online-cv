@@ -292,3 +292,17 @@ export const SlideInFwdCenter = keyframes`
     opacity: 1;
   }
 `
+export const SlitInVerical = keyframes`
+  0% {
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(0) rotateY(0);
+    opacity: 1;
+  }
+`

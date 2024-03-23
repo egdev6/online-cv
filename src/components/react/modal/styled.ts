@@ -91,7 +91,7 @@ export const Backdrop = styled.div`
   width: 100vw;
   height: 100%;
   overflow: hidden;
-  z-index: 7;
+  z-index: 9;
   background-color: var(--color-background-opacity);
   opacity: 0;
   transition: 0.4s ease-in-out;
@@ -120,40 +120,4 @@ export const Heading = styled.div`
   background: var(--color-background-opacity-top);
   padding: 20px;
   border-radius: 20px;
-  > h5 {
-    color: var(--color-text);
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  > svg {
-    width: calc(100% - 40px);
-    margin: 0 auto 20px;
-  }
-
-  .main-stack {
-    padding: 5px 10px;
-    border: 1px solid var(--color-yellow);
-    color: var(--color-text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    margin-bottom: 10px;
-
-    > svg {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-
-      > path:last-child {
-        fill: var(--color-yellow);
-      }
-    }
-  }
-
-  .skill-description {
-    color: var(--color-text);
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
 `

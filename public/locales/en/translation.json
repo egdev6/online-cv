@@ -1,6 +1,17 @@
 {
-  "Cargando": "Loading...",
-  "Gira el dispositivo": "Turn the device",
+  "messages": {
+    "Cargando": "Loading...",
+    "Cambia a un dispositivo más grande para ver la página.": "Please switch to a larger device to view the page.",
+    "mainStack": "Main Stack",
+    "presential": "Presential",
+    "remote": "Remote",
+    "current": "Present",
+    "years": "years",
+    "year": "year",
+    "months": "months",
+    "month": "month",
+    "future": "Next challenge"
+  },
   "steps": {
     "step1": "Welcome",
     "step2": "About me",
@@ -115,7 +126,39 @@
     }
   },
   "experience": {
-    "title": "Experiencia"
+    "title": "Experience",
+    "description": "Competencies",
+    "competencies": {
+      "nerlaska": {
+        "1": "Programación de FX",
+        "2": "Implementación de GUI (Game User Interface)",
+        "3": "Scripting",
+        "4": "Gameplays/Testing",
+        "5": "Diseño y desarrollo Web"
+      },
+      "imaweb": {
+        "1": "Análisis técnico de incidencias (tanto a nivel de código como de bbdd)",
+        "2": "Resolución de incidencias técnicas",
+        "3": "Proyectos secundarios",
+        "4": "Automatización de tareas"
+      },
+      "cloud": {
+        "1": "Desarrollo de proyectos de principio a fin",
+        "2": "Trabajo conjunto con diseño UI/UX y backend",
+        "3": "Diseño e implementación de arquitectura frontend",
+        "4": "Conexión con APIs",
+        "5": "Maquetación responsive",
+        "6": "Creación de componentes",
+        "7": "Animaciones y transiciones CSS/Javacript"
+      },
+      "scrm": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": ""
+      }
+    }
   },
   "projects": {
     "title": "Proyectos"

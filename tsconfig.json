@@ -26,7 +26,8 @@
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"],
       "@stores/*": ["./src/stores/*"],
-      "@model/*": ["./src/model/*"]
+      "@model/*": ["./src/model/*"],
+      "@config/*": ["./src/config/*"]
     },
     "jsxImportSource": "react"
   },

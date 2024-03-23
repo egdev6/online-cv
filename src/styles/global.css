@@ -17,6 +17,7 @@
   /* RGBA COLORS */
   --color-background-opacity: rgba(17, 17, 17, 0.8);
   --color-text-opacity: rgba(229, 229, 229, 0.4);
+  --color-primary-opacity: rgba(131, 2, 19, 0.8);
   /* GRADIENT COLORS */
   --color-red-gradient: linear-gradient(90deg, #d61e2b 0%, #830213 100%);
   --color-background-opacity-right: linear-gradient(

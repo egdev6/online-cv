@@ -2,7 +2,15 @@
   "messages": {
     "Cargando": "Cargando...",
     "Cambia a un dispositivo más grande para ver la página.": "Cambia a un dispositivo más grande para ver la página.",
-    "mainStack": "Stack principal"
+    "mainStack": "Stack principal",
+    "presential": "Presencial",
+    "remote": "Remoto",
+    "current": "Actualidad",
+    "years": "años",
+    "year": "año",
+    "months": "meses",
+    "month": "mes",
+    "future": "Próximo reto"
   },
   "steps": {
     "step1": "Bienvenida",
@@ -118,7 +126,39 @@
     }
   },
   "experience": {
-    "title": "Experiencia"
+    "title": "Experiencia",
+    "description": "Competencias",
+    "competencies": {
+      "nerlaska": {
+        "1": "Programación de FX",
+        "2": "Implementación de GUI (Game User Interface)",
+        "3": "Scripting",
+        "4": "Gameplays/Testing",
+        "5": "Diseño y desarrollo Web"
+      },
+      "imaweb": {
+        "1": "Análisis técnico de incidencias (tanto a nivel de código como de bbdd)",
+        "2": "Resolución de incidencias técnicas",
+        "3": "Proyectos secundarios",
+        "4": "Automatización de tareas"
+      },
+      "cloud": {
+        "1": "Desarrollo de proyectos de principio a fin",
+        "2": "Trabajo conjunto con diseño UI/UX y backend",
+        "3": "Diseño e implementación de arquitectura frontend",
+        "4": "Conexión con APIs",
+        "5": "Maquetación responsive",
+        "6": "Creación de componentes",
+        "7": "Animaciones y transiciones CSS/Javacript"
+      },
+      "scrm": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": ""
+      }
+    }
   },
   "projects": {
     "title": "Proyectos"

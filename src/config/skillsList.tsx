@@ -4,15 +4,15 @@ import javascript from './technologies/javascript'
 import html5 from './technologies/html5'
 import css3 from './technologies/css3'
 import styledComponents from './technologies/styledComponents'
-import redux from './technologies/redux'
+import reactQuery from './technologies/reactQuery'
 import git from './technologies/git'
 import astro from './technologies/astro'
 import typescript from './technologies/typescript'
 import tailwind from './technologies/tailwind'
 import material from './technologies/material'
 import sass from './technologies/sass'
+import redux from './technologies/redux'
 import reduxSaga from './technologies/reduxSaga'
-import reactQuery from './technologies/reactQuery'
 import npm from './technologies/npm'
 import yarn from './technologies/yarn'
 import webpack from './technologies/webpack'
@@ -36,23 +36,24 @@ import chrome from './technologies/chrome'
 import safari from './technologies/safari'
 import ubuntu from './technologies/ubuntu'
 import jira from './technologies/jira'
+import { type Skill } from '@model/skill'
 
-const skillsList = [
+const skillsList: Skill[] = [
   React,
   NextJs,
   javascript,
   html5,
   css3,
   styledComponents,
-  redux,
+  reactQuery,
   git,
   astro,
   typescript,
   tailwind,
   material,
   sass,
+  redux,
   reduxSaga,
-  reactQuery,
   npm,
   yarn,
   webpack,

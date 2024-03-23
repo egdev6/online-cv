@@ -7,20 +7,17 @@ import {
   useEffect,
   useState,
 } from 'react'
-import Close from '@icons/close.svg?react'
 import classNames from 'classnames'
 import ReactDOM from 'react-dom'
-import { type Skill } from 'src/model/skill'
-import Favorite from '@icons/favorite.svg?react'
-import { useTranslation } from 'react-i18next'
-
+import Close from '@icons/close.svg?react'
 import * as S from './styled'
 
 interface ModalProps {
   onClose: (value: boolean) => void
   open?: boolean
   className?: string
-  skill?: Skill | null
+  heading?: JSX.Element
+  content?: JSX.Element
 }
 
 const getModalContainer = (): HTMLDivElement => {
@@ -36,9 +33,9 @@ const getModalContainer = (): HTMLDivElement => {
   return container
 }
 
-const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, className, onClose, open = false, skill }) => {
-  const { t } = useTranslation()
-  const [content, setContent] = useState<ReactNode>(null)
+const Modal: FC<PropsWithChildren<ModalProps>> = ({ className, onClose, open = false, heading, content }) => {
+  const [modalContent, setModalContent] = useState<ReactNode>(null)
+  const [modalHeading, setModalHeading] = useState<ReactNode>(null)
   const [fadeIn, setFadeIn] = useState(false)
 
   const handleEsc = ({ key }: KeyboardEvent) => {
@@ -49,7 +46,8 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, className, onClose
 
   const handleTransitionEnd: TransitionEventHandler = useCallback(({ propertyName, currentTarget, target }) => {
     if (target === currentTarget && propertyName === 'opacity' && !currentTarget.classList.contains('fade-in')) {
-      setContent(null)
+      setModalContent(null)
+      setModalHeading(null)
     }
   }, [])
 
@@ -63,14 +61,15 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, className, onClose
 
   useEffect(() => {
     if (open) {
-      setContent(children)
+      setModalContent(content)
+      setModalHeading(heading)
       setTimeout(() => setFadeIn(true), 100)
     } else {
       setFadeIn(false)
     }
-  }, [open, children])
+  }, [open, content, heading])
 
-  if (!content) {
+  if (!modalContent && !modalHeading) {
     return null
   }
 
@@ -79,21 +78,12 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, className, onClose
   const ModalContent = (
     <S.Backdrop className={classNames(className, { 'fade-in': fadeIn })} onTransitionEnd={handleTransitionEnd}>
       <S.Content>
-        <S.Heading>
-          <h5>{skill?.title}</h5>
-          {skill?.icon}
-          {skill?.mainStack && (
-            <p className='main-stack'>
-              <Favorite /> {t('messages.mainStack')}
-            </p>
-          )}
-          <p className='skill-description'>{skill?.description}</p>
-        </S.Heading>
+        <S.Heading>{modalHeading}</S.Heading>
         <S.ContentWrapper>
           <button onClick={() => onClose(false)}>
             <Close />
           </button>
-          <S.ChildrenContent>{content}</S.ChildrenContent>
+          <S.ChildrenContent>{modalContent}</S.ChildrenContent>
         </S.ContentWrapper>
       </S.Content>
     </S.Backdrop>

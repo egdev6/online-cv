@@ -68,7 +68,7 @@ export const SkillsContainer = styled.div`
         }
       }
 
-       &.fixed{
+      &.fixed{
         >div{
           >.skill-item{
             animation: none !important;
@@ -193,13 +193,51 @@ export const SkillItem = styled.button<SkillItemProps>`
   }
 `
 
+export const ModalHeading = styled.div`
+  > h5 {
+    color: var(--color-text);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  > svg {
+    width: calc(100% - 40px);
+    margin: 0 auto 20px;
+  }
+
+  .main-stack {
+    padding: 5px 10px;
+    border: 1px solid var(--color-yellow);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    > svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+
+      > path:last-child {
+        fill: var(--color-yellow);
+      }
+    }
+  }
+
+  .skill-description {
+    color: var(--color-text);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+`
 export const ModalContent = styled.div`
   width: 100%;
   height: auto;
 
   > h6 {
     width: calc(100% - 60px);
-    border-bottom: 2px solid var(--color-secondary);
+    border-bottom: 5px solid var(--color-secondary);
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
