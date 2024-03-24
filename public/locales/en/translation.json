@@ -130,26 +130,26 @@
     "description": "Competencies",
     "competencies": {
       "nerlaska": {
-        "1": "Programación de FX",
-        "2": "Implementación de GUI (Game User Interface)",
+        "1": "FX programming",
+        "2": "GUI (Game User Interface) Implementation",
         "3": "Scripting",
         "4": "Gameplays/Testing",
-        "5": "Diseño y desarrollo Web"
+        "5": "Web design and development"
       },
       "imaweb": {
-        "1": "Análisis técnico de incidencias (tanto a nivel de código como de bbdd)",
-        "2": "Resolución de incidencias técnicas",
-        "3": "Proyectos secundarios",
-        "4": "Automatización de tareas"
+        "1": "Technical analysis of incidents (both at the code and database level)",
+        "2": "Resolution of technical incidents",
+        "3": "Side projects",
+        "4": "Task automation"
       },
       "cloud": {
-        "1": "Desarrollo de proyectos de principio a fin",
-        "2": "Trabajo conjunto con diseño UI/UX y backend",
-        "3": "Diseño e implementación de arquitectura frontend",
-        "4": "Conexión con APIs",
-        "5": "Maquetación responsive",
-        "6": "Creación de componentes",
-        "7": "Animaciones y transiciones CSS/Javacript"
+        "1": "End-to-finish project development",
+        "2": "Joint work with UI/UX and backend design",
+        "3": "Design and implementation of frontend architecture",
+        "4": "Connection with APIs",
+        "5": "Responsive layout",
+        "6": "Component creation",
+        "7": "CSS/Javascript animations and transitions"
       },
       "scrm": {
         "1": "",

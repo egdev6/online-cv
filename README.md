@@ -74,7 +74,7 @@ Desktop Version
 - [x] Presentation view [ES, EN]
 - [x] About me view [ES, EN]
 - [x] Skills view [ES, EN]
-- [ ] Experience view [ES, EN]
+- [x] Experience view [ES, EN]
 - [ ] Projects view [ES, EN]
 - [ ] Contact view [ES, EN]
 
