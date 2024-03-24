@@ -158,22 +158,23 @@ export const PresentationImage = styled.div`
 `
 
 export const PresentationMe = styled.div`
-    max-width: 30%;
+  max-width: 30%;
+  min-width: 400px;
+  position: absolute;
+  top: calc(calc(100vh / 2) - 300px);
+  left: calc(calc(100vw / 2) - 15%);
+  z-index: 5;
+  opacity: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1124px) {
     min-width: 400px;
-    position: absolute;
-    top: calc(calc(100vh / 2) - 300px);
-    left: calc(calc(100vw / 2) - 15%);
-    z-index: 5;
-    opacity:0;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    @media (max-width: 1124px) {
-      min-width: 400px;
-      bottom:-520px;
-      top:initial;
-      left: calc(calc(100vw / 2) - 200px);
+    bottom: -520px;
+    top: initial;
+    left: calc(calc(100vw / 2) - 200px);
+  }
 `

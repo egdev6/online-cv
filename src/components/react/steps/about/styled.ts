@@ -179,7 +179,7 @@ export const AboutWrapper = styled.div<{ translate?: number }>`
 
       @media (max-width: 915px) {
         width: 100vw;
-        padding: 100px 40px 40px;
+        padding: 140px 80px 40px;
       }
 
       > .about-professional-info {
@@ -212,7 +212,7 @@ export const AboutWrapper = styled.div<{ translate?: number }>`
 
       @media (max-width: 915px) {
         width: 100vw;
-        padding: 120px 40px;
+        padding: 140px 80px 40px;
       }
 
       > .about-personal-info {
@@ -245,7 +245,7 @@ export const AboutSelection = styled.div`
 
   @media (max-width: 915px) {
     width: 100vw;
-    height: 25vh;
+    height: 50vh;
   }
 `
 
@@ -261,7 +261,7 @@ export const AboutPersonal = styled.div`
 
   @media (max-width: 915px) {
     width: 100vw;
-    height: 75vh;
+    height: 50vh;
     align-items: flex-start;
   }
 `

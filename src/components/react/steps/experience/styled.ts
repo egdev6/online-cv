@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FadeInCenter, SlitInVerical } from 'src/styles/animations'
+import { BounceInLeft, FadeInCenter, SlitInVerical } from 'src/styles/animations'
 
 export const ExperienceContainer = styled.div`
   width: 100vw;
@@ -9,6 +9,29 @@ export const ExperienceContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    filter: grayscale(100%);
+    translateY(-600px) rotateX(-30deg) scale(0);
+    opacity:0;
+  }
+  > .image-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+    background-color: var(--color-background-opacity);
+  }
 
   > h3 {
     width: 100%;
@@ -26,23 +49,26 @@ export const ExperienceContainer = styled.div`
   }
 
   &.start-animation {
+    > img {
+      animation: ${BounceInLeft} 0.6s ease-in-out 0.6s 1 forwards;
+    }
     > h3 {
-      animation: ${FadeInCenter} 0.8s ease-in-out 1.2s 1 forwards;
+      animation: ${FadeInCenter} 0.8s ease-in-out 0.6s 1 forwards;
     }
 
     > .experience-list {
       > .experience-item {
         &:nth-child(1) {
-          animation: ${SlitInVerical} 0.8s ease-in-out 0s 1 forwards;
+          animation: ${SlitInVerical} 0.8s ease-in-out 1s 1 forwards;
         }
         &:nth-child(2) {
-          animation: ${SlitInVerical} 0.8s ease-in-out 0.4s 1 forwards;
+          animation: ${SlitInVerical} 0.8s ease-in-out 1s 1 forwards;
         }
         &:nth-child(3) {
-          animation: ${SlitInVerical} 0.8s ease-in-out 0.8s 1 forwards;
+          animation: ${SlitInVerical} 0.8s ease-in-out 1s 1 forwards;
         }
         &:nth-child(4) {
-          animation: ${SlitInVerical} 0.8s ease-in-out 1.2s 1 forwards;
+          animation: ${SlitInVerical} 0.8s ease-in-out 1s 1 forwards;
         }
       }
 
@@ -276,11 +302,15 @@ export const ModalContent = styled.div`
         align-items: center;
 
         > svg {
-          width: 1em;
-          height: 1em;
+          width: 18px;
+          height: 18px;
           fill: var(--color-primary);
           transform: rotate(-90deg);
           margin-right: 5px;
+        }
+
+        > p {
+          width: calc(100% - 20px);
         }
       }
     }

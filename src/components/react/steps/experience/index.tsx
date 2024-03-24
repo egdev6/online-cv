@@ -111,7 +111,7 @@ const Experience: FC = () => {
                 return (
                   <li key={index}>
                     <Arrow />
-                    {competency}
+                    <p>{competency}</p>
                   </li>
                 )
               })}
@@ -126,6 +126,8 @@ const Experience: FC = () => {
 
   return (
     <S.ExperienceContainer id='experience' ref={ref}>
+      <img src='src/assets/images/experience.png' alt='Experience' />
+      <div className='image-wrapper'></div>
       <h3>{t('experience.title')}</h3>
       <S.ExperienceList className='experience-list' ref={refList}>
         {renderExperienceList()}
