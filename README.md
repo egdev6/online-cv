@@ -24,8 +24,9 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-<br />
- [![Cabecera-Linkedin.png](https://i.postimg.cc/xC7VMyzT/Cabecera-Linkedin.png)](https://postimg.cc/ftxPhdC6)
+[![Cabecera-Linkedin.png](https://i.postimg.cc/xC7VMyzT/Cabecera-Linkedin.png)](https://postimg.cc/ftxPhdC6)
+
+ 
 <div align="center">
   <h3 align="center">online-cv</h3>
   <p align="center">
