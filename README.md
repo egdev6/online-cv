@@ -25,13 +25,9 @@
 
 <!-- PROJECT LOGO -->
 <br />
+ [![Cabecera-Linkedin.png](https://i.postimg.cc/xC7VMyzT/Cabecera-Linkedin.png)](https://postimg.cc/ftxPhdC6)
 <div align="center">
-  <a href="https://github.com/egdev6/online-cv">
-    [![Cabecera-Linkedin.png](https://i.postimg.cc/xC7VMyzT/Cabecera-Linkedin.png)](https://postimg.cc/ftxPhdC6)
-  </a>
-
   <h3 align="center">online-cv</h3>
-
   <p align="center">
     My online CV
     <br />
