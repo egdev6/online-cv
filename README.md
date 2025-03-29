@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/egdev6/online-cv">
-    <img src="https://i.postimg.cc/FKJyrbpd/Linkedin-egdev-Mesa-de-trabajo-1.png)](https://postimg.cc/HJdc3yfd" alt="Logo">
+    [![Cabecera-Linkedin.png](https://i.postimg.cc/xC7VMyzT/Cabecera-Linkedin.png)](https://postimg.cc/ftxPhdC6)
   </a>
 
   <h3 align="center">online-cv</h3>
